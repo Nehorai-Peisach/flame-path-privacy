@@ -7,8 +7,11 @@ Required by two separate parties, both of which refuse to proceed without it:
 - **Google AdMob** will not publish a GDPR consent message for an app that has no privacy policy URL.
 - **Apple** requires one on every App Store listing.
 
-`index.html` is the whole site. Edit it, commit, push — Pages redeploys within a minute or so.
+`index.html` is the policy and `support/index.html` the support page (the App Store's
+Support URL). Edit, commit, push — Pages redeploys within a minute or so.
 
-Facts in it are drawn from what the app actually does: local `UserDefaults` only, no servers,
-no analytics SDK, and an advertising data table taken from Google's own published
-`PrivacyInfo.xcprivacy` for the Mobile Ads SDK rather than from marketing copy.
+Facts in it are drawn from what the app actually does: the save in `UserDefaults`, a backup in
+the player's own iCloud Drive through Game Center, the ledger on Supabase (Game Center player
+ID, purchase receipts, a daily progress line), no analytics SDK, and an advertising data table
+taken from Google's own published `PrivacyInfo.xcprivacy` for the Mobile Ads SDK rather than
+from marketing copy. When the app starts collecting anything new, this page changes with it.
